@@ -1,7 +1,7 @@
 
 import BrandSection from "~/components/brand-section";
 import type { Route } from "./+types/Login";
-import { useProvider } from "~/libs/hooks/useProvider";
+import { useProvider } from "~/lib/hooks/useProvider";
 import LoginForm from "~/components/login-from";
 import { useState } from "react";
 
@@ -33,7 +33,7 @@ export default function LoginPage() {
 
           <LoginForm setIsLoading={setIsLoading} isLoading={isLoading} />
 
-          <p className="text-center text-sm text-muted-foreground mt-8">
+          <p className="text-center text-sm text-muted-foreground mt-8 hidden">
             New to ChatApp?{' '}
             <a href="#" className="text-primary font-semibold hover:underline">
               Create an account

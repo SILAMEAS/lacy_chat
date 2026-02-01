@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from './ui/button'
 import { Chrome } from 'lucide-react'
-import { useProvider } from '~/libs/hooks/useProvider'
+import { useProvider } from '~/lib/hooks/useProvider'
 
 interface LoginFormProps {
   isLoading: boolean

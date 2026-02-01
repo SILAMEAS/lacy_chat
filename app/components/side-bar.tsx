@@ -1,11 +1,9 @@
-'use client';
-
 import { Search, Plus } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 // import { Button } from '@/components/ui/button'
 import { Input } from './ui/input'
 import { Button } from './ui/button';
-import { useProvider } from '~/libs/hooks/useProvider';
+import { useProvider } from '~/lib/hooks/useProvider';
 
 interface Conversation {
   id: string

@@ -2,7 +2,6 @@ import type { Route } from "./+types/ChatApp";
 import { useState } from 'react'
 import { Sidebar } from "~/components/side-bar";
 import { ChatWindow } from "~/components/chat-window";
-import { useProvider } from "~/libs/hooks/useProvider";
 
 export function meta({}: Route.MetaArgs) {
   return [

@@ -1,15 +1,10 @@
 import { Navigate, Outlet } from "react-router"
-import { checkTokenInfo } from "~/libs/utils/checkTokenInfo"
+import { checkTokenInfo } from "~/lib/utils/checkTokenInfo"
 
 export default function AuthLayoutRoute() {
-//   const isAuthenticated = false // replace with real auth logic
-// //   console.log("")
-
-//   if (!isAuthenticated) {
-//     return <Navigate to="/login" replace />
-//   }
-// checkTokenInfo()
-// console.log(checkTokenInfo())
+  if (!checkTokenInfo()) {
+    return <Navigate to="/login" replace />
+  }
   return (
     <div className="auth-layout min-h-screen">
       <Outlet />

@@ -1,4 +1,4 @@
-import api from "~/libs/api";
+import api from "~/lib/api";
 import type { Route } from "./+types/NotFound";
 
 export function meta({}: Route.MetaArgs) {
