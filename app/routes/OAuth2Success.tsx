@@ -27,10 +27,10 @@ export default function OAuth2Success() {
 
     // 1️⃣ Store token (memory)
     console.log("OAuth2 token:", token);
-    dispatch(setTokens({ accessToken: token, refreshToken: "" }));
+    dispatch(setTokens({ accessToken: token, refreshToken: "xxx" }));
 
-    // 2️⃣ Clean URL (VERY IMPORTANT)
-    window.history.replaceState({}, "", "/");
+    // // 2️⃣ Clean URL (VERY IMPORTANT)
+    // window.history.replaceState({}, "", "/");
 
 
     // 4️⃣ Continue app

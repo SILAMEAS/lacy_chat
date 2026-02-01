@@ -9,7 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./global.css";
-import ReduxProvider from "./lib/redux.provider";
+import ReduxProvider from "./lib/provider/redux.provider";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },

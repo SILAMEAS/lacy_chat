@@ -12,6 +12,7 @@ export default function LoginForm({
   isLoading,
   setIsLoading,
 }: LoginFormProps) {
+  // useGetUserQuery
     const {loginWithGoogle } = useProvider();
   const handleGoogleLogin = async () => {
     setIsLoading(true)
@@ -24,13 +25,17 @@ export default function LoginForm({
 
   return (
     <Button
-      onClick={handleGoogleLogin}
+      onClick={()=>{
+        window.location.href = import.meta.env.VITE_OAUTH2_AUTHORIZATION_URL + '/google';
+      }}
+    
       disabled={isLoading}
       size="lg"
       className="w-full h-12 bg-white hover:bg-slate-50 text-foreground border-2 border-border shadow-sm hover:shadow-md transition-all"
     >
       <UimGoogle className="w-5 h-5 mr-2" />
-      {isLoading ? 'Signing in...' : 'Continue With Google'}
+      <a href={import.meta.env.VITE_OAUTH2_AUTHORIZATION_URL + '/google'}>{isLoading ? 'Signing in...' : 'Continue With Google'}</a>
+      
     </Button>
   )
 }
